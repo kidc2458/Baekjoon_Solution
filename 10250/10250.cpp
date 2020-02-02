@@ -2,10 +2,20 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int T, H, W, N;
+	cin >> T;
+
+	for (int i = 0; i < T; ++i)
+	{
+		cin >> H >> W >> N;
+		int XX = N / H + 1;//호수
+		int YY = N % H;//층수
+		cout << (YY ? YY : H) * 100 + (YY ? XX : XX - 1) << endl;
+	}
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
